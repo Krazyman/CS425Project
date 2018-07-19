@@ -117,24 +117,20 @@ def gui():
     root = Tk()
     root.geometry("700x790")
     root.title("MBI Scheduling Program")
-    root.iconbitmap(r'C:\\Users\\narut\\Desktop\\CS425\\CS425 Project\\Logos-mbi.ico')
-    path1 = "C:\\Users\\narut\\Desktop\\CS425\\CS425 Project\\i4.png"
-    img1 = ImageTk.PhotoImage(Image.open(path1))    
+    root.iconbitmap("Logos-mbi.ico")
+    img1 = PhotoImage(file='i4.png')
     panel1 = Label(root, image=img1)
     panel1.grid(row=4, column=4+1, sticky=N+S+E+W)
 
-    path2 = "C:\\Users\\narut\\Desktop\\CS425\\CS425 Project\\i2.jpg"
-    img2 = ImageTk.PhotoImage(Image.open(path2))    
+    img2 = PhotoImage(file='i2.png')   
     panel2 = Label(root, image=img2)
     panel2.grid(row=4, column=5+1, sticky=N+S+E+W)
 
-    path3 = "C:\\Users\\narut\\Desktop\\CS425\\CS425 Project\\i3.png"
-    img3 = ImageTk.PhotoImage(Image.open(path3))    
+    img3 = PhotoImage(file='i3.png')
     panel3 = Label(root, image=img3)
     panel3.grid(row=4, column=6+1, sticky=N+S+E+W)
 
-    path4 = "C:\\Users\\narut\\Desktop\\CS425\\CS425 Project\\i1.jpg"
-    img4 = ImageTk.PhotoImage(Image.open(path4))    
+    img4 = PhotoImage(file='i1.png')   
     panel4 = Label(root, image=img4)
     panel4.grid(row=4, column=7+1, sticky=N+S+E+W)
 
