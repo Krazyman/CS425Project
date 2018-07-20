@@ -115,7 +115,7 @@ def buttonpress(function, *args):
 # Creates the window for the graphic user interface
 def gui():
     root = Tk()
-    root.geometry("700x600")
+    root.geometry("700x450")
     w = root.winfo_screenwidth()
     h = root.winfo_screenheight()
     root.title("MBI Scheduling Program")
@@ -194,7 +194,7 @@ def gui():
     global textbox
     textbox = Text(root,font=("Helvetica",8),state=DISABLED, yscrollcommand=scrollbar.set, wrap=WORD)
     # This puts the text box on the left hand side
-    textbox.config(width=100, height=35)
+    textbox.config(width=100, height=25)
     textbox.grid(row=2, rowspan=1, column=0, columnspan=8, sticky=N+S+W+E)
 
     # Configure the scroll bar to stroll with the text box!
