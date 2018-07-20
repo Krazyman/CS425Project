@@ -118,9 +118,11 @@ def gui():
     root.geometry("700x650")
     root.title("MBI Scheduling Program")
     root.iconbitmap("Logos-mbi.ico")
+
     img1 = PhotoImage(file='i4.png')
     panel1 = Label(root, image=img1)
     panel1.grid(row=4, column=4+1, sticky=N+S+E+W)
+
 
     img2 = PhotoImage(file='i2.png')   
     panel2 = Label(root, image=img2)
@@ -205,6 +207,10 @@ def gui():
     # Print hello so we can see the redirect is working!
     print ("Please input Promotion Request and Staff Schedule.\nPress Start when files are inputted.\n\
 Use the buttons to sort and filter the schedules that have been generated.\n")
+    root.columnconfigure(0, weight=1)
+    root.rowconfigure(0, weight=0) # not needed, this is the default behavior
+    root.rowconfigure(1, weight=1)
+    root.rowconfigure(2, weight=1)
     # Start the application mainloop
     root.mainloop()
 
