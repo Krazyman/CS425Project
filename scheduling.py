@@ -115,7 +115,7 @@ def buttonpress(function, *args):
 # Creates the window for the graphic user interface
 def gui():
     root = Tk()
-    root.geometry("700x790")
+    root.geometry("700x900")
     root.title("MBI Scheduling Program")
     root.iconbitmap("Logos-mbi.ico")
     img1 = PhotoImage(file='i4.png')
