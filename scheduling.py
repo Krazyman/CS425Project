@@ -9,7 +9,7 @@ class Redir(object):
     def __init__(self, textbox):
         self.textbox = textbox
         self.textbox.config(state=NORMAL)
-        self.fileno = sys.stdout.fileno
+        # self.fileno = sys.stdout.fileno
 
 
     def write(self, message):
@@ -115,7 +115,7 @@ def buttonpress(function, *args):
 # Creates the window for the graphic user interface
 def gui():
     root = Tk()
-    root.geometry("700x900")
+    root.geometry("700x790")
     root.title("MBI Scheduling Program")
     root.iconbitmap("Logos-mbi.ico")
     img1 = PhotoImage(file='i4.png')
@@ -198,7 +198,7 @@ def gui():
 
     #Set up the redirect 
     stdre = Redir(textbox)
-    # Redirect stdout, stdout is where the standard messages are ouput
+    # Redirect stdout, stdout is where the standard messages are output
     sys.stdout = stdre
     # Redirect stderr, stderr is where the errors are printed too!
     sys.stderr = stdre

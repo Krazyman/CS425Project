@@ -8,7 +8,7 @@ os.environ['TK_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tk8.6')
 
 base = None    
 
-executables = [Executable("scheduling.py", base=base)]
+executables = [Executable("scheduling.py", base="Win32GUI")]
 
 packages = ["idna", "operator", "tkinter", "funcs", "os", "PIL"]
 options = {
