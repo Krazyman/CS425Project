@@ -115,7 +115,9 @@ def buttonpress(function, *args):
 # Creates the window for the graphic user interface
 def gui():
     root = Tk()
-    root.geometry("700x650")
+    root.geometry("700x600")
+    w = root.winfo_screenwidth()
+    h = root.winfo_screenheight()
     root.title("MBI Scheduling Program")
     root.iconbitmap("Logos-mbi.ico")
 
@@ -192,7 +194,7 @@ def gui():
     global textbox
     textbox = Text(root,font=("Helvetica",8),state=DISABLED, yscrollcommand=scrollbar.set, wrap=WORD)
     # This puts the text box on the left hand side
-    textbox.config(width=100, height=40)
+    textbox.config(width=100, height=35)
     textbox.grid(row=2, rowspan=1, column=0, columnspan=8, sticky=N+S+W+E)
 
     # Configure the scroll bar to stroll with the text box!
@@ -208,7 +210,7 @@ def gui():
     print ("Please input Promotion Request and Staff Schedule.\nPress Start when files are inputted.\n\
 Use the buttons to sort and filter the schedules that have been generated.\n")
     root.columnconfigure(0, weight=1)
-    root.rowconfigure(0, weight=0) # not needed, this is the default behavior
+    root.rowconfigure(0, weight=1) # not needed, this is the default behavior
     root.rowconfigure(1, weight=1)
     root.rowconfigure(2, weight=1)
     # Start the application mainloop
